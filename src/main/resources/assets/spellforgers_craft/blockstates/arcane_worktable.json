@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"facing=north": {
+		    "model": "spellforgers_craft:block/arcane_worktable",
+		    "y": 0
+		},
+		"facing=east": {
+            "model": "spellforgers_craft:block/arcane_worktable",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "spellforgers_craft:block/arcane_worktable",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "spellforgers_craft:block/arcane_worktable",
+            "y": 270
+        }
+	}
+}

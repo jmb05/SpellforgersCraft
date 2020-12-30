@@ -1,0 +1,12 @@
+{
+    "type": "spellforgers_craft:fluid",
+	"output": {
+		"item": "spellforgers_craft:mana_dark_oak"
+	},
+    "fluid": "spellforgers_craft:mana",
+	"input": {
+		"item": "minecraft:dark_oak_planks"
+	},
+	"delay": 75,
+	"knockback": 0
+}

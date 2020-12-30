@@ -1,0 +1,12 @@
+{
+    "type": "spellforgers_craft:fluid",
+	"output": {
+		"item": "spellforgers_craft:blank_spellbook"
+	},
+    "fluid": "spellforgers_craft:mana",
+	"input": {
+		"item": "minecraft:book"
+	},
+	"delay": 100,
+	"knockback": 1
+}

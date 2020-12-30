@@ -1,0 +1,16 @@
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory
+license="All rights reserved"
+#issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId="spellforgers_craft" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Spellforger's Craft" #mandatory
+#updateJSONURL="http://myurl.me/" #optional
+#displayURL="http://example.com/" #optional
+logoFile="logo.png" #optional
+#credits="Thanks for this example mod goes to Java" #optional
+authors="jmb19905" #optional
+description='''
+No Description yet :(
+'''
