@@ -6,7 +6,7 @@ import net.jmb19905.spellforgers_craft.common.fluids.SpellCraftFluids;
 import net.jmb19905.spellforgers_craft.common.items.SpellCraftItems;
 import net.jmb19905.spellforgers_craft.common.network.ManaMessage;
 import net.jmb19905.spellforgers_craft.common.network.NetworkStartup;
-import net.jmb19905.spellforgers_craft.common.recipes.FluidRecipe;
+import net.jmb19905.spellforgers_craft.common.recipes.fluid.FluidRecipe;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;

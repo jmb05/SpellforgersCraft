@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "spellforgers_craft:items/basic_mana_ring"
+	}
+}

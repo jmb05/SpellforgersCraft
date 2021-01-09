@@ -1,0 +1,7 @@
+{
+    "type": "spellforgers_craft:shape",
+    "input": {
+        "item": "minecraft:diamond"
+    },
+    "shape": "projectile_shape"
+}

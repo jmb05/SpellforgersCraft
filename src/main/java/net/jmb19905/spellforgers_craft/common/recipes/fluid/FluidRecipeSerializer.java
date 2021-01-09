@@ -1,7 +1,6 @@
-package net.jmb19905.spellforgers_craft.common.recipes;
+package net.jmb19905.spellforgers_craft.common.recipes.fluid;
 
 import com.google.gson.JsonObject;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;

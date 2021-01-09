@@ -9,6 +9,7 @@ import net.jmb19905.spellforgers_craft.common.items.SpellCraftItems;
 import net.jmb19905.spellforgers_craft.common.network.NetworkStartup;
 import net.jmb19905.spellforgers_craft.common.particles.SpellCraftParticles;
 import net.jmb19905.spellforgers_craft.common.recipes.SpellCraftRecipes;
+import net.jmb19905.spellforgers_craft.core.compatability.ExternalMods;
 import net.jmb19905.spellforgers_craft.core.SpellCraftEventBusSubscriber;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.item.BlockItem;
@@ -19,6 +20,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -26,6 +28,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -76,6 +80,10 @@ public class SpellforgersCraft {
         MinecraftForge.EVENT_BUS.register(SpellCraftEventBusSubscriber.class);
         MinecraftForge.EVENT_BUS.register(CapabilityAttachEventHandler.class);
         MinecraftForge.EVENT_BUS.register(ClientEventBusSubscriber.class);
+
+        if(ExternalMods.CURIOS.isLoaded()) {
+            InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.RING.getMessageBuilder().size(3).build());
+        }
     }
 
     public static class SpellforgersCraftItemGroup extends ItemGroup{

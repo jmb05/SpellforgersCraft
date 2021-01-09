@@ -29,4 +29,20 @@ public class Util {
         Vector3d vec3d1 = vec3d.add((double)f6 * reach, (double)f5 * reach, (double)f7 * reach);
         return worldIn.rayTraceBlocks(new RayTraceContext(vec3d, vec3d1, RayTraceContext.BlockMode.OUTLINE, fluidMode, entity));
     }
+
+    public static void addPlayerMana(PlayerEntity playerEntity, int manaLvl){
+        Mana mana = playerEntity.getCapability(ManaCapability.CAPABILITY_MANA).orElse(null);
+        int newManaLvl = mana.getMana() + manaLvl;
+        if(newManaLvl < mana.getMaxMana()) {
+            mana.setMana(newManaLvl);
+        }else if(newManaLvl > mana.getMaxMana()){
+            mana.setMaxMana(mana.getMaxMana());
+        }
+    }
+
+    public static int getPlayerMana(PlayerEntity playerEntity){
+        Mana mana = playerEntity.getCapability(ManaCapability.CAPABILITY_MANA).orElse(null);
+        return mana.getMana();
+    }
+
 }

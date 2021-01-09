@@ -1,8 +1,6 @@
-package net.jmb19905.spellforgers_craft.common.recipes;
+package net.jmb19905.spellforgers_craft.common.recipes.spell.shape;
 
 import net.jmb19905.spellforgers_craft.SpellforgersCraft;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.Ingredient;
@@ -12,9 +10,9 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 
 import javax.annotation.Nonnull;
 
-public interface IFluidRecipe extends IRecipe<RecipeWrapper> {
+public interface IShapeRecipe extends IRecipe<RecipeWrapper> {
 
-    ResourceLocation RECIPE_TYPE_ID = new ResourceLocation(SpellforgersCraft.MODID, "fluid");
+    ResourceLocation RECIPE_TYPE_ID = new ResourceLocation(SpellforgersCraft.MODID, "shape");
 
     @Nonnull
     @Override
@@ -29,10 +27,6 @@ public interface IFluidRecipe extends IRecipe<RecipeWrapper> {
 
     Ingredient getInput();
 
-    FlowingFluidBlock getFluid();
-
-    int getDelay();
-
-    float getKnockback();
+    String getShape();
 
 }

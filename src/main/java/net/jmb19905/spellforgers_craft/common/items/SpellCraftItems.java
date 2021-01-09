@@ -19,4 +19,8 @@ public class SpellCraftItems {
 
     public static final RegistryObject<Item> MANAMETER = ITEMS.register("manameter", ManameterItem::new);
 
+    public static final RegistryObject<Item> BASIC_MANA_RING = ITEMS.register("basic_mana_ring",() -> new ManaRing(1200));
+
+    public static final RegistryObject<Item> ADVANCED_MANA_RING = ITEMS.register("advanced_mana_ring", () -> new ManaRing(20));
+
 }

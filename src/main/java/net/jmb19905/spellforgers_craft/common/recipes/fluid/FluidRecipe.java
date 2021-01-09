@@ -1,5 +1,6 @@
-package net.jmb19905.spellforgers_craft.common.recipes;
+package net.jmb19905.spellforgers_craft.common.recipes.fluid;
 
+import net.jmb19905.spellforgers_craft.common.recipes.SpellCraftRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.item.ItemStack;

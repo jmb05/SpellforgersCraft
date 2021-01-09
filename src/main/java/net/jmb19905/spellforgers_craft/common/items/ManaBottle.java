@@ -3,6 +3,7 @@ package net.jmb19905.spellforgers_craft.common.items;
 import net.jmb19905.spellforgers_craft.SpellforgersCraft;
 import net.jmb19905.spellforgers_craft.common.capability.Mana;
 import net.jmb19905.spellforgers_craft.common.capability.ManaCapability;
+import net.jmb19905.spellforgers_craft.core.Util;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -36,20 +37,9 @@ public class ManaBottle extends Item {
                 PlayerEntity player = (PlayerEntity) entityLiving;
                 player.addItemStackToInventory(new ItemStack(Items.GLASS_BOTTLE, 1));
                 player.attackEntityFrom(DamageSource.MAGIC, 1);
-                setPlayerMana(player, 10);
+                Util.addPlayerMana(player, 10);
             }
         }
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
-
-    private void setPlayerMana(PlayerEntity playerEntity, int manaLvl){
-        Mana mana = playerEntity.getCapability(ManaCapability.CAPABILITY_MANA).orElse(null);
-        int newManaLvl = mana.getMana() + manaLvl;
-        if(newManaLvl <= mana.getMaxMana()) {
-            mana.setMana(newManaLvl);
-        }else{
-            mana.setMaxMana(mana.getMaxMana());
-        }
-    }
-
 }
